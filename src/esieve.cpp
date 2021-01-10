@@ -14,9 +14,8 @@ bool renewCurrentPrime(ulong& prime)
 {
     while (prime < s_last) {
         ++prime;
-        if (s_pAll[prime - 1] == 1) {
+        if (s_pAll[prime - 1] == 1)
             return true;
-        }
     }
     return false;
 }
@@ -57,9 +56,9 @@ int main()
     getline(std::cin, strInput);
     bool bDetail = (strInput == "n");
     if (bDetail)
-        printf("\n Start to work out all primes below %d...\n", s_last);
+        printf("\n Start to work out all primes below %u...\n", s_last);
     else
-        printf("\n Start to work out the sum of all primes below %d...\n", s_last);
+        printf("\n Start to work out the sum of all primes below %u...\n", s_last);
     DWORD tickBegin = GetTickCount();
     s_pAll = new u8[s_last];
     if (!s_pAll) {
